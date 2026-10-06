@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickQR Studio — Professional QR Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+  <main class="app-wrapper">
+    <header class="app-header">
+      <div class="brand-badge">PRO TOOL</div>
+      <h1>QuickQR Studio</h1>
+      <p>Generate high-definition QR codes for websites, text, and networks.</p>
+    </header>
+
+    <div class="workspace-card">
+      <div class="input-section">
+        <label for="qrInput" class="field-label">Destination URL or Text</label>
+        <div class="input-wrapper">
+          <input type="text" id="qrInput" placeholder="https://example.com" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="settings-grid">
+        <div class="input-section">
+          <label for="sizeSelect" class="field-label">Resolution</label>
+          <select id="sizeSelect">
+            <option value="150">Standard (150px)</option>
+            <option value="220" selected>High-Res (220px)</option>
+            <option value="320">Print-Ready (320px)</option>
+          </select>
+        </div>
+
+        <div class="input-section">
+          <label for="fgColor" class="field-label">Code Color</label>
+          <div class="color-picker-wrapper">
+            <input type="color" id="fgColor" value="#0f172a">
+          </div>
+        </div>
+
+        <div class="input-section">
+          <label for="bgColor" class="field-label">Background</label>
+          <div class="color-picker-wrapper">
+            <input type="color" id="bgColor" value="#ffffff">
+          </div>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="primary-btn">
+        <span>Generate QR Code</span>
+      </button>
+
+      <div id="qrResult" class="preview-area">
+        <div id="qrcode" class="qr-canvas"></div>
+        <button id="downloadBtn" class="secondary-btn" style="display: none;">
+          Download PNG
+        </button>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <p>Free online utility • Safe & client-side processed</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
